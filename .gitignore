@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Models (too large for Git)
+models/
+models/*.bin
+models/*.pt
+*.pth
+
+# Data
+data/raw/*
+data/processed/*
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Weights & Biases
+wandb/
+
+# Keep directory structure
+!models/.gitkeep
+!data/.gitkeep
