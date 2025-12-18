@@ -40,8 +40,9 @@ class DataPreprocessor:
 
         # Optional: Use subset for faster experimentation
         if subset_size:
-            dataset['train'] = dataset['train'].select(range(subset_size))
-            dataset['test'] = dataset['test'].select(range(subset_size // 5))
+            # SHUFFLE FIRST to get balanced data!
+            dataset['train'] = dataset['train'].shuffle(seed=42).select(range(subset_size))
+            dataset['test'] = dataset['test'].shuffle(seed=42).select(range(subset_size // 5))
 
         # Tokenize the dataset
         print("Tokenizing the dataset...")
