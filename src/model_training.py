@@ -49,7 +49,7 @@ class ModelTrainer:
             per_device_train_batch_size=8,   # How many examples to process (reviews) at once during training
             per_device_eval_batch_size=16,  # Batch size for evaluation (testing). Larger for evaluation (no gradient calculation)
             learning_rate=2e-5,             # How much to update the model's weights after each batch (2e-5 because the model is already pre-trained)
-            weight_decay=0.01,              # Regularization technique to prevent overfitting
+            weight_decay=0.1,              # Regularization technique to prevent overfitting
 
             # Evaluation and logging
             eval_strategy="epoch",    # Evaluate after each epoch
